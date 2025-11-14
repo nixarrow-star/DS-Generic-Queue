@@ -22,6 +22,6 @@ struct queue *queue_init();
 struct queue *queue_push(struct queue *queue, void *data, void (*destroy_data)(void *));
 void *queue_peek(struct queue *queue);
 void *queue_pop(struct queue *queue);
-void *queue_destroy(struct queue *queue);
+void queue_destroy(struct queue *queue);
 
 #endif /* GENERIC_QUEUE_H */
