@@ -8,6 +8,7 @@ struct queue_node
     void *data;
     void (*destroy_data)(void *);
     struct queue_node *next;
+    struct queue_node *prev;
 };
 
 struct queue

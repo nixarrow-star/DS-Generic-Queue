@@ -18,6 +18,13 @@ struct queue *queue_push(struct queue *queue, void *data, void (*destroy_data)(v
     node->data = data;
     node->destroy_data = destroy_data;
     node->next = queue->head;
+    node->prev = NULL;
+    
+    //Link to prev
+    if(node->next != NULL)
+    {
+        node->next->prev = node;
+    }
 
     //Queue update
     queue->head = node;
